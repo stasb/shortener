@@ -1,0 +1,11 @@
+%h1 Enter the URL here
+= form_for @link do |f|
+  - if @link.errors.any?
+    .text-error
+      %p
+        Form is invalid
+        %p
+          %ul.text-error
+            - for message in @entry.errors.full_messages
+              %li.text-error= message
+

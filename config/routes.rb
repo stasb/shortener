@@ -1,4 +1,10 @@
 Shortener::Application.routes.draw do
+  get "link/new"
+
+  get "link/create"
+
+  resources :links
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
