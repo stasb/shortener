@@ -8,4 +8,10 @@
           %ul.text-error
             - for message in @entry.errors.full_messages
               %li.text-error= message
+  %p
+    = f.text_field :store, :class => "span3"
+  %p
+    = f.submit "Shorten", class: "btn btn-primary"
+
+
 

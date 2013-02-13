@@ -5,6 +5,8 @@ Shortener::Application.routes.draw do
 
   resources :links
 
+  root :to => "links#new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
