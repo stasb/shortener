@@ -1,5 +1,6 @@
-%h1 Enter the URL here
-= form_for @link do |f|
+%h1 Enter your URL, bro.
+%br
+= form_for @link, remote: true do |f|
   - if @link.errors.any?
     .text-error
       %p
@@ -9,9 +10,6 @@
             - for message in @entry.errors.full_messages
               %li.text-error= message
   %p
-    = f.text_field :store, :class => "span3"
+    = f.text_field :store, :class => "span5"
   %p
-    = f.submit "Shorten", class: "btn btn-primary"
-
-
-
+    = f.submit "Shorten URL", class: "btn btn-primary btn-large", id: "copy-button"

@@ -1,0 +1,7 @@
+var content = "<input class='span3 copy-field' type='text' data-toggle='tooltip' title=' press ⌘+c to copy' value=#{escape_javascript(redirect_url(@link.alias))}>"
+
+var container_load = $(content).hide().appendTo('.container').fadeIn(50)
+
+$(container_load).focus().select()
+
+$('.copy-field').tooltip({placement: 'bottom', trigger: 'focus'}).tooltip('show');
