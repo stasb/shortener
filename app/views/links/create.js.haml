@@ -5,3 +5,5 @@ var container_load = $(content).hide().appendTo('.container').fadeIn(50)
 $(container_load).focus().select()
 
 $('.copy-field').tooltip({placement: 'bottom', trigger: 'focus'}).tooltip('show');
+
+$('#copy-button').click(function(){$('#copy-button').prop('disabled', true).addClass('disabled')});

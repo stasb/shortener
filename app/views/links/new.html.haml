@@ -1,13 +1,13 @@
 %h1 Enter your URL, bro.
 %br
-= form_for @link, remote: true do |f|
+= form_for @link, remote: true, :validate => true do |f|
   - if @link.errors.any?
     .text-error
       %p
         Form is invalid
         %p
           %ul.text-error
-            - for message in @entry.errors.full_messages
+            - for message in @link.errors.full_messages
               %li.text-error= message
   %p
     = f.text_field :store, :class => "span5"

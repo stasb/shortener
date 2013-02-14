@@ -30,3 +30,33 @@
 //
 // Example:
 // @linkColor: #ff0000;
+
+@baseFontSize: 18px;
+
+.tooltip {
+  position: absolute;
+  z-index: @zindexTooltip;
+  display: block;
+  visibility: visible;
+  font-size: 15px;
+  width: 150px;
+  line-height: 2;
+  .opacity(0);
+  &.in     { .opacity(80); }
+  &.top    { margin-top:  -3px; padding: 5px 0; }
+  &.right  { margin-left:  3px; padding: 0 5px; }
+  &.bottom { margin-top:   3px; padding: 5px 0; }
+  &.left   { margin-left: -3px; padding: 0 5px; }
+}
+
+.container {
+  padding-top: 200px;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.field_with_errors .message {
+  .alert;
+  .alert-error;
+  width: 420px;
+}

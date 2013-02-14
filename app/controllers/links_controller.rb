@@ -7,9 +7,15 @@ class LinksController < ApplicationController
   def create
     @link = Link.shorten(params[:link])
     if @link.save
-      redirect_to link_path(@link), :notice => "URL shortened!"
+      respond_to do |format|
+        format.html { redirect_to link_path(@link), :notice => "URL shortened!" }
+        format.js
+      end
     else
-      render "new"
+      respond_to do |format|
+        format.html { render "new" }
+        format.js
+      end
     end
   end
 
