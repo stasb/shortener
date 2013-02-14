@@ -17,4 +17,9 @@ class LinksController < ApplicationController
     @link = Link.find(params[:id])
   end
 
+  def redirect
+    @link = Link.find(params[:alias])
+    redirect_to @link.store
+  end
+
 end

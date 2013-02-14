@@ -1,8 +1,10 @@
 %h1 Redirect Result
-%p 
-  The alias:
+%p The Alias:
 %p
   = @link.alias
 %p
-  The store:
-= link_to @link.store, @link.store
+  The Store:
+  = link_to @link.store, @link.store
+%p
+  Redirect URL:
+  = link_to redirect_url(@link.alias), redirect_path(@link.alias)
