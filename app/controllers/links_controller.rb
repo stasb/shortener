@@ -18,8 +18,12 @@ class LinksController < ApplicationController
   end
 
   def redirect
-    @link = Link.find(params[:alias])
-    redirect_to @link.store
+    @link = Link.find_by_alias(params[:alias])
+    if @link.store =~ /^(http:\/\/)/
+      redirect_to "#{@link.store}"
+    else
+      redirect_to "http://#{@link.store}"
+    end
   end
 
 end

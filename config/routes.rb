@@ -7,7 +7,7 @@ Shortener::Application.routes.draw do
 
   root :to => "links#new"
 
-  match '/:alias', :controller => "links", :action => "redirect", :as => "redirect"
+  match ':alias', :controller => "links", :action => "redirect", :as => "redirect"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
