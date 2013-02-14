@@ -25,7 +25,7 @@ class LinksController < ApplicationController
 
   def redirect
     @link = Link.find_by_alias(params[:alias])
-    if @link.store =~ /^(http:\/\/)/
+    if @link.store =~ /^(http:\/\/)/ or @link.store =~ /^(https:\/\/)/
       redirect_to "#{@link.store}"
     else
       redirect_to "http://#{@link.store}"
