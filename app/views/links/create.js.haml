@@ -1,4 +1,4 @@
-var content = "<input class='span3 copy-field' type='text' data-toggle='tooltip' title=' press ⌘+c to copy' value=#{escape_javascript(redirect_url(@link.alias))}>"
+var content = "<input class='span3 copy-field well well-large' type='text' data-toggle='tooltip' title=' press ⌘+c to copy' value=#{escape_javascript(redirect_url(@link.alias))}>"
 
 var container_load = $(content).hide().appendTo('.container').fadeIn(50)
 
