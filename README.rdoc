@@ -1,4 +1,4 @@
-== mnml - Demo App
+== Mnml - Demo App
 
 Mnml is a simple URL shortener app implemented in rails. It features PostgreSQL as the primary database, and uses ajax
 on the front end to display the shortened URL result. 
